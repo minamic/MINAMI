@@ -3,11 +3,16 @@
 #include "Singleton.h"
 #include "Exception.h"
 #include "Log.h"
+#include "CheckMemLeak.h"
 using namespace MINAMI;
 void main()
 {
+	EnableMemoryLeakCheck();
+	char* b = new char[5];
 	Application& application = Singleton<Application>::GetInstance();
-	Log::LogToConsole("log test to console.");
-	Log::LogToFile("log test to file");
-	throw Exception("exception test.");
+	if(false == application.Initialize())
+	{
+		EXCEPTION("Application Initialize failed.");
+	}
+	application.Run();
 }

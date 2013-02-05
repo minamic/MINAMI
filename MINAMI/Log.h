@@ -10,7 +10,7 @@ namespace MINAMI
 {
 
 const std::string default_log_filename = "Log.txt";
-//TODO:add system time to string format.
+
 class Log
 {
 public:
@@ -21,9 +21,6 @@ public:
 	}
 	static void LogToConsole(std::string message)
 	{
-		SYSTEMTIME sys; 
-		GetLocalTime(&sys); 
-		printf( "-----%4d/%02d/%02d %02d:%02d:%02d.%03d ÐÇÆÚ%1d-----\n",sys.wYear,sys.wMonth,sys.wDay,sys.wHour,sys.wMinute, sys.wSecond,sys.wMilliseconds,sys.wDayOfWeek); 
 		std::cout<<"Log: "<<message<<std::endl;
 	}
 };

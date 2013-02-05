@@ -10,18 +10,21 @@
 namespace MINAMI
 {
 
+
 class Exception : public std::exception
 {
 public:
-	Exception(std::string message)
+	Exception(std::string message, std::string filename, int line_num)
 	{
 		std::stringstream message_stream;
-		message_stream<<"Exception Occur:" << message << "\nin file: " << __FILE__ << "\nat line: " << __LINE__;
+		message_stream<<"Exception Occur:" << message << "\nin file: " << filename << "\nat line: " << line_num;
 		//MessageBox(NULL, message.c_str(), "MINAMI::Exception:", MB_OK);
 		std::cout<<message_stream.str();
 	}
 	virtual ~Exception(){}
 };
+
+#define EXCEPTION(message) throw Exception(message, __FILE__, __LINE__);
 
 };//namespace MINAMI
 

@@ -60,15 +60,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="CheckMemLeak.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RenderSystem.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="CheckMemLeak.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="filetemplate.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Noncopyable.h" />
+    <ClInclude Include="RenderSystem.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

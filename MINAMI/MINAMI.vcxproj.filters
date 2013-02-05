@@ -19,10 +19,25 @@
     <Filter Include="misc">
       <UniqueIdentifier>{2aebe556-154a-4e49-8943-53cfec97c693}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RenderSystem">
+      <UniqueIdentifier>{979a4bdd-cb68-499d-8b0c-b1e80f5cfb2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem.cpp">
+      <Filter>RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckMemLeak.cpp">
+      <Filter>misc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +58,15 @@
     </ClInclude>
     <ClInclude Include="Log.h">
       <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem.h">
+      <Filter>RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckMemLeak.h">
+      <Filter>misc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
